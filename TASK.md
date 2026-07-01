@@ -1,6 +1,6 @@
 # TASK.md — Multimodal Perception Development Tasks
 
-Current Phase: 2 (Perception Layer)
+Current Phase: 3 (Embedding & Retrieval Layer)
 Status: IN_PROGRESS
 
 ---
@@ -26,18 +26,18 @@ Status: IN_PROGRESS
 - [x] Implement and run unit tests for configuration, models, logging, and samples
 
 ## Phase 2: Perception Layer (Sections 6.1 + 6.3)
-- [/] VLM Interface Unified Client
-- [/] PII sensitivity scanner
-- [ ] PDF extractor (Docling + direct text OCR + confidence fallback)
-- [ ] Image extractor (VLM + JSON schema enforcement)
-- [ ] Table extractor (Pandas profiler + NL summary anchor)
-- [ ] Audio extractor (Whisper + VLM structured summary)
-- [ ] Modality Dispatcher router
-- [ ] Perception tests (unit, mock, integration)
+- [x] VLM Interface Unified Client
+- [x] PII sensitivity scanner
+- [x] PDF extractor (Docling + direct text OCR + confidence fallback)
+- [x] Image extractor (VLM + JSON schema enforcement)
+- [x] Table extractor (Pandas profiler + NL summary anchor)
+- [x] Audio extractor (Whisper + VLM structured summary)
+- [x] Modality Dispatcher router
+- [x] Perception tests (unit, mock, integration)
 
 ## Phase 3: Embedding & Retrieval Layer (Section 6.4)
-- [ ] Dense encoder (CLIP)
-- [ ] Sparse encoder (SPLADE)
+- [/] Dense encoder (CLIP)
+- [/] Sparse encoder (SPLADE)
 - [ ] Asset registry (SQLite backend)
 - [ ] Vector Catalog (Qdrant client + hybrid search + RRF)
 - [ ] Embedding + retrieval tests
