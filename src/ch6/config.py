@@ -1,10 +1,16 @@
 # Section 6.2: Orchestration Config
 
+import os
 from typing import Optional
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class AppConfig(BaseSettings):
+    def __init__(self, *args, **kwargs):
+        if "PYTEST_CURRENT_TEST" in os.environ and "_env_file" not in kwargs:
+            kwargs["_env_file"] = None
+        super().__init__(*args, **kwargs)
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
