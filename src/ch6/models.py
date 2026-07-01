@@ -38,17 +38,22 @@ class PerceptionChunk(BaseModel):
             raise ValueError("Confidence must be between 0.0 and 1.0 inclusive")
         return v
 
+class SparseVectorModel(BaseModel):
+    """Indices and values mapping for learned sparse term expansion."""
+    indices: List[int] = Field(..., description="Sparse vector active dimension indices")
+    values: List[float] = Field(..., description="Sparse vector active dimension weights")
+
 class EmbeddedChunk(BaseModel):
     """PerceptionChunk enriched with multi-modal vector embeddings."""
     chunk: PerceptionChunk
     dense_vector: Optional[List[float]] = Field(default=None, description="Dense embedding vector")
-    sparse_vector: Optional[Dict[str, float]] = Field(default=None, description="Sparse embedding map (index to weight)")
+    sparse_vector: Optional[SparseVectorModel] = Field(default=None, description="Sparse embedding map")
 
 class HandoffPayload(BaseModel):
     """The strict typed payload contract flowing between pipeline stages and agents."""
     chunk: PerceptionChunk
     dense_vector: Optional[List[float]] = Field(default=None, description="Dense embedding vector")
-    sparse_vector: Optional[Dict[str, float]] = Field(default=None, description="Sparse embedding map")
+    sparse_vector: Optional[SparseVectorModel] = Field(default=None, description="Sparse embedding map")
     qdrant_point_id: Optional[str] = Field(default=None, description="Vector database point ID")
     validation_status: str = Field(..., description="Contract validation status (e.g. VALID, REVIEW)")
     flags: List[str] = Field(default_factory=list, description="Tracing and audit flags (e.g. PII_DETECTED, LOW_CONFIDENCE)")

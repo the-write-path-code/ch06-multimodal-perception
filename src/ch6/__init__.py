@@ -7,6 +7,7 @@ from ch6.models import (
     ZoneType,
     PerceptionChunk,
     EmbeddedChunk,
+    SparseVectorModel,
     HandoffPayload,
     RetrievalResult,
 )
@@ -18,6 +19,7 @@ __all__ = [
     "ZoneType",
     "PerceptionChunk",
     "EmbeddedChunk",
+    "SparseVectorModel",
     "HandoffPayload",
     "RetrievalResult",
 ]

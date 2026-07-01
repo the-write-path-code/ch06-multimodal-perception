@@ -1,6 +1,6 @@
 # TASK.md — Multimodal Perception Development Tasks
 
-Current Phase: 3 (Embedding & Retrieval Layer)
+Current Phase: 4 (Handoff Contracts & Full Pipeline)
 Status: IN_PROGRESS
 
 ---
@@ -36,15 +36,15 @@ Status: IN_PROGRESS
 - [x] Perception tests (unit, mock, integration)
 
 ## Phase 3: Embedding & Retrieval Layer (Section 6.4)
-- [/] Dense encoder (CLIP)
-- [/] Sparse encoder (SPLADE)
-- [ ] Asset registry (SQLite backend)
-- [ ] Vector Catalog (Qdrant client + hybrid search + RRF)
-- [ ] Embedding + retrieval tests
+- [x] Dense encoder (CLIP)
+- [x] Sparse encoder (SPLADE)
+- [x] Asset registry (SQLite backend)
+- [x] Vector Catalog (Qdrant client + hybrid search + RRF)
+- [x] Embedding + retrieval tests
 
 ## Phase 4: Handoff Contracts & Full Pipeline (Sections 6.2 + 6.5)
-- [ ] Handoff payload contract verification
-- [ ] Async pipeline orchestrator
+- [/] Handoff payload contract verification
+- [/] Async pipeline orchestrator
 - [ ] Query interface
 - [ ] End-to-end tests
 
