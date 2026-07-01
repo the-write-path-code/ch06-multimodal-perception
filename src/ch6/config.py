@@ -26,8 +26,10 @@ class AppConfig(BaseSettings):
     enable_sparse_embeddings: bool = Field(default=True, description="Whether to compute SPLADE sparse vectors")
     dense_embedding_model: str = Field(default="clip-ViT-B-32", description="HuggingFace model ID for dense cross-modal embeddings")
 
-    # Cloud VLM config (Gemini)
+    # Cloud VLM config (Gemini or NVIDIA NIM)
     gemini_api_key: Optional[str] = Field(default=None, description="API Key for Google Gemini Cloud VLM")
+    nvidia_api_key: Optional[str] = Field(default=None, description="API Key for NVIDIA NIM API Catalog")
+    nvidia_vlm_model: str = Field(default="meta/llama-3.2-11b-vision-instruct", description="VLM model identifier from NVIDIA API Catalog")
 
     # Local VLM config (Ollama)
     use_local_vlm: bool = Field(default=False, description="Flag to force fallback to local Ollama VLM")

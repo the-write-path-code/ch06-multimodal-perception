@@ -58,10 +58,10 @@ async def main():
     # 4. Search Queries
     search_service = SearchService()
     
-    # Query 1: Text search
+    # Query 1: Text search with higher top_k
     query_text = "What is the copay amount on the insurance card?"
     logger.info("Executing text search query", query=query_text)
-    text_results = await search_service.search(text_query=query_text, top_k=2)
+    text_results = await search_service.search(text_query=query_text, top_k=5)
     for idx, r in enumerate(text_results):
         logger.info(
             f"Text Search Result #{idx+1}",
@@ -83,6 +83,35 @@ async def main():
             preview=r["content_preview"][:120].replace('\n', ' '),
             structured=r["structured_data"]
         )
+
+    # Query 3: Image-filtered text search
+    query_text3 = "Member ID HFP-98765432-01"
+    logger.info("Executing image-filtered text search", query=query_text3)
+    image_filtered_results = await search_service.search(text_query=query_text3, filter_modality="image", top_k=2)
+    for idx, r in enumerate(image_filtered_results):
+        logger.info(
+            f"Image-Filtered Search Result #{idx+1}",
+            score=r["score"],
+            source=r["source_file"],
+            preview=r["content_preview"][:120].replace('\n', ' '),
+            structured=r["structured_data"]
+        )
+
+    # Query 4: Visual image-to-image search
+    from PIL import Image as PILImage
+    card_img_path = "data/samples/insurance_card_front.png"
+    if os.path.exists(card_img_path):
+        logger.info("Executing visual image search using card crop", path=card_img_path)
+        img_obj = PILImage.open(card_img_path)
+        visual_results = await search_service.search(image_query=img_obj, top_k=2)
+        for idx, r in enumerate(visual_results):
+            logger.info(
+                f"Visual Search Result #{idx+1}",
+                score=r["score"],
+                source=r["source_file"],
+                preview=r["content_preview"][:120].replace('\n', ' '),
+                structured=r["structured_data"]
+            )
 
 if __name__ == "__main__":
     asyncio.run(main())
