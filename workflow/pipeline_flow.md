@@ -175,20 +175,6 @@ graph TD
     style FinalDisplay fill:#0f172a,color:#f1f5f9,stroke:#334155
 ```
 
-### UI Components
-
-| Component | Gradio Type | Purpose |
-|---|---|---|
-| Text Query | `gr.Textbox` | Natural language question input |
-| Image Query | `gr.Image` | Visual similarity search via image upload |
-| Modality Filter | `gr.Radio` | Filter results by document type |
-| Top-K Slider | `gr.Slider` | Control number of returned results (1–10) |
-| Search Button | `gr.Button` | Trigger hybrid search |
-| Results Display | `gr.HTML` | Rendered cards with answer panel, thumbnails, and schemas |
-| Document Sidebar | `gr.HTML` | Live document tracker with modality badges |
-| Re-index Button | `gr.Button` | Wipe and rebuild the vector index |
-| Examples | `gr.Examples` | Pre-configured one-click query shortcuts |
-
 ---
 
 ## 4. VLM Client Failover Strategy
