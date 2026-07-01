@@ -191,58 +191,7 @@ graph TD
 
 ---
 
-## 4. Gated Agentic Loop State Transitions
-
-> **Chapter Reference:** AGENTS.md Protocol
-
-This state diagram depicts the execution contracts and phase gates governing autonomous iteration within the repository.
-
-```mermaid
-stateDiagram-v2
-    [*] --> Architect : Task Initialized
-    
-    Architect --> Implementer : TASK.md updated with ARCH prefix
-    note right of Architect
-        Defines high-level schemas
-        and structural boundaries
-    end note
-    
-    Implementer --> Verifier : src/ files coded with IMPL prefix
-    note right of Implementer
-        Writes modality parsers,
-        sensitivity scans, and search pipelines
-    end note
-    
-    state Verifier {
-        [*] --> RunTests
-        RunTests --> TestPass : All tests green
-        RunTests --> TestFail : Any test fails
-    }
-    
-    TestPass --> MemoryAgent : Pass phase=N
-    TestFail --> SummarizeFailure : Append details to FAILURES.md
-    
-    SummarizeFailure --> Implementer : Retry pipeline loop
-    
-    MemoryAgent --> Orchestrator : Lessons recorded
-    Orchestrator --> [*] : Phase 4 complete
-    Orchestrator --> Architect : Advance Phase with ORCH prefix
-```
-
-### Phase Gates
-
-| Phase | Name | Gate Condition |
-|---|---|---|
-| 0 | Foundation Scaffolding | `pyproject.toml` installs cleanly with `uv sync` |
-| 1 | Config + Models | `test_phase1_config.py` all green |
-| 2 | Perception Extractors | `test_phase2_extractors.py` all green |
-| 3 | Embeddings + Retrieval | `test_phase3_retrieval.py` all green |
-| 4 | Pipeline + Handoffs | `test_phase4_pipeline.py` all green |
-| 5 | Polish + Docs | README complete, notebook runs end-to-end |
-
----
-
-## 5. VLM Client Failover Strategy
+## 4. VLM Client Failover Strategy
 
 > **Chapter Reference:** Section 6.3
 
