@@ -45,6 +45,8 @@ class MockDocument:
     def __init__(self, elements):
         self.elements = elements
         self.pages = {1: MockPage()}
+    def iterate_items(self):
+        return [(el, 1) for el in self.elements]
 
 class MockResult:
     def __init__(self, elements):

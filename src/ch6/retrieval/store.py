@@ -15,9 +15,13 @@ from ch6.embedding.sparse import SparseEncoder
 class VectorCatalog:
     """Manages Qdrant vector database collection configuration, upserts, and hybrid RRF search."""
 
+    _shared_client: Optional[AsyncQdrantClient] = None
+
     def __init__(self) -> None:
         if config.qdrant_url == ":memory:":
-            self.client = AsyncQdrantClient(location=":memory:")
+            if VectorCatalog._shared_client is None:
+                VectorCatalog._shared_client = AsyncQdrantClient(location=":memory:")
+            self.client = VectorCatalog._shared_client
         else:
             self.client = AsyncQdrantClient(
                 url=config.qdrant_url,

@@ -1,7 +1,7 @@
 # TASK.md — Multimodal Perception Development Tasks
 
-Current Phase: 4 (Handoff Contracts & Full Pipeline)
-Status: IN_PROGRESS
+Current Phase: 5 (Polish & Docs)
+Status: COMPLETE
 
 ---
 
@@ -43,12 +43,12 @@ Status: IN_PROGRESS
 - [x] Embedding + retrieval tests
 
 ## Phase 4: Handoff Contracts & Full Pipeline (Sections 6.2 + 6.5)
-- [/] Handoff payload contract verification
-- [/] Async pipeline orchestrator
-- [ ] Query interface
-- [ ] End-to-end tests
+- [x] Handoff payload contract verification
+- [x] Async pipeline orchestrator
+- [x] Query interface
+- [x] End-to-end tests
 
 ## Phase 5: Polish & Docs
-- [ ] Chapter walkthrough Jupyter notebook
-- [ ] Section mapping README
+- [/] Chapter walkthrough Jupyter notebook
+- [/] Section mapping README
 - [ ] Clean up and final verification

@@ -3,6 +3,7 @@
 import os
 import json
 import base64
+import asyncio
 from typing import Any, Dict, Optional, Type
 from pydantic import BaseModel
 from google import genai
@@ -74,7 +75,6 @@ class VLMClient:
             # Running genai client call in a thread pool as it is synchronous in the SDK
             loop = asyncio.get_running_loop()
         except RuntimeError:
-            import asyncio
             loop = asyncio.get_event_loop()
 
         def _sync_call():

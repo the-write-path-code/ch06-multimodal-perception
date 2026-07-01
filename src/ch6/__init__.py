@@ -11,6 +11,8 @@ from ch6.models import (
     HandoffPayload,
     RetrievalResult,
 )
+from ch6.pipeline import PerceptionPipeline
+from ch6.query import SearchService
 
 __all__ = [
     "config",
@@ -22,4 +24,6 @@ __all__ = [
     "SparseVectorModel",
     "HandoffPayload",
     "RetrievalResult",
+    "PerceptionPipeline",
+    "SearchService",
 ]

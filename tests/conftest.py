@@ -15,6 +15,8 @@ from pathlib import Path
 @pytest.fixture(autouse=True)
 def setup_test_env():
     """Sets up standard environment overrides for all unit testing runs."""
+    from ch6.retrieval.store import VectorCatalog
+    VectorCatalog._shared_client = None
     yield
     # Clean up test registry db if created
     db_file = Path("data/test_registry.db")

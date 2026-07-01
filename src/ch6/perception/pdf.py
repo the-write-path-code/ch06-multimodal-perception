@@ -104,7 +104,7 @@ class PDFExtractor:
 
             idx = 0
             # 3. Iterate detected layout zones
-            for element in doc.elements:
+            for element, level in doc.iterate_items():
                 idx += 1
                 class_name = element.__class__.__name__
 
