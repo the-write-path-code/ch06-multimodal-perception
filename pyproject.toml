@@ -1,100 +1,40 @@
 [project]
 name = "ch6-multimodal-perception"
 version = "0.1.0"
-description = "Chapter 6: Multimodal Perception - Async RAG pipeline for PDF, image, table, and audio modalities"
+description = "Chapter 6: Multimodal Perception companion repository"
 readme = "README.md"
-license = { file = "LICENSE" }
 requires-python = ">=3.12"
-authors = [
-    { name = "Mohit Aggarwal" }
-]
-keywords = ["multimodal", "RAG", "perception", "NLP", "computer-vision", "audio"]
-classifiers = [
-    "Development Status :: 3 - Alpha",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: Apache Software License",
-    "Programming Language :: Python :: 3.12",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence",
-]
-
 dependencies = [
-    # Core async and config
     "pydantic>=2.7.0",
-    "pydantic-settings>=2.3.0",
-    "python-dotenv>=1.0.1",
-    "anyio>=4.4.0",
-    # PDF extraction
-    "docling>=2.0.0",
-    "pdfplumber>=0.11.0",
-    "pypdf>=4.2.0",
-    # Image / VLM
-    "pillow>=10.3.0",
-    "transformers>=4.41.0",
-    "torch>=2.3.0",
-    # NER / entity extraction
-    "gliner>=0.1.12",
-    # Audio extraction
-    "openai-whisper>=20231117",
-    "librosa>=0.10.2",
-    # Embeddings
-    "sentence-transformers>=3.0.0",
-    # Sparse retrieval
-    "rank-bm25>=0.2.2",
-    # Vector store
+    "pydantic-settings>=2.2.0",
+    "structlog>=24.1.0",
     "qdrant-client>=1.9.0",
-    # Database
-    "asyncpg>=0.29.0",
-    "sqlalchemy[asyncio]>=2.0.30",
-    "alembic>=1.13.1",
-    # Observability
-    "structlog>=24.2.0",
-    "rich>=13.7.1",
-    # Data generation helpers
-    "faker>=25.2.0",
-    "fpdf2>=2.7.9",
-    "numpy>=1.26.4",
-    "pandas>=2.2.2",
-    "scipy>=1.13.0",
+    "fastembed>=0.2.7",
+    "sentence-transformers>=3.0.0",
+    "google-genai>=0.1.0",
+    "ollama>=0.2.0",
+    "faster-whisper>=1.0.0",
+    "docling>=2.0.0",
+    "gliner>=0.1.0",
+    "pillow>=10.3.0",
+    "reportlab>=4.1.0",
+    "pandas>=2.2.0",
+    "faker>=25.0.0",
+    "edge-tts>=6.1.10",
+    "aiosqlite>=0.20.0",
+    "openpyxl>=3.1.0",
+    "numpy>=1.26.0",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "pytest>=8.2.0",
-    "pytest-asyncio>=0.23.7",
-    "pytest-cov>=5.0.0",
-    "httpx>=0.27.0",
-    "ruff>=0.4.7",
-    "mypy>=1.10.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
 ]
 
-[project.scripts]
-ch6-pipeline = "ch6_multimodal_perception.main:main"
-ch6-generate = "ch6_multimodal_perception.data_generator:main"
+[tool.hatch.build.targets.wheel]
+packages = ["src/ch6"]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/ch6_multimodal_perception"]
-
-[tool.ruff]
-line-length = 100
-target-version = "py312"
-
-[tool.ruff.lint]
-select = ["E", "F", "I", "N", "UP", "RUF"]
-
-[tool.mypy]
-python_version = "3.12"
-strict = false
-ignore_missing_imports = true
-
-[tool.pytest.ini_options]
-asyncio_mode = "auto"
-testpaths = ["tests"]
-addopts = "--tb=short -v"
-
-[tool.coverage.run]
-source = ["src"]
-omit = ["tests/*", "*/__init__.py"]

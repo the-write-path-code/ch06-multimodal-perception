@@ -1,0 +1,93 @@
+{
+  "nurse_visit_note_001.wav": {
+    "modality": "audio",
+    "transcript_contains": [
+      "John Smith",
+      "9:15 AM",
+      "blood pressure",
+      "140 over 90",
+      "insulin"
+    ],
+    "expected_entities": [
+      "John Smith",
+      "10 units"
+    ],
+    "duration_min": 5.0
+  },
+  "care_coordination_call.wav": {
+    "modality": "audio",
+    "transcript_contains": [
+      "Doctor Patel",
+      "Lisinopril",
+      "20 milligrams",
+      "blood pressure"
+    ],
+    "expected_entities": [
+      "Doctor Patel",
+      "Lisinopril"
+    ],
+    "duration_min": 5.0
+  },
+  "shift_handoff_summary.wav": {
+    "modality": "audio",
+    "transcript_contains": [
+      "Three patients",
+      "John Smith",
+      "Sarah Connor",
+      "David Miller"
+    ],
+    "expected_entities": [
+      "John Smith",
+      "Sarah Connor",
+      "David Miller"
+    ],
+    "duration_min": 5.0
+  },
+  "insurance_card_front.png": {
+    "modality": "image",
+    "expected_metadata": {
+      "member_id": "HFP-98765432-01",
+      "group_number": "GRP-55443"
+    }
+  },
+  "medication_chart.png": {
+    "modality": "image",
+    "expected_metadata": {
+      "patient": "Sarah Connor",
+      "medications": [
+        "Metformin",
+        "Lisinopril",
+        "Atorvastatin"
+      ]
+    }
+  },
+  "home_health_visits.csv": {
+    "modality": "table",
+    "row_count": 500,
+    "columns": [
+      "patient_id",
+      "nurse_name",
+      "visit_date",
+      "time_in",
+      "time_out",
+      "service_code",
+      "diagnosis_code",
+      "notes",
+      "billing_amount"
+    ]
+  },
+  "medical_supplies_inventory.csv": {
+    "modality": "table",
+    "row_count": 200,
+    "columns": [
+      "supply_id",
+      "item_name",
+      "category",
+      "quantity",
+      "unit_price",
+      "reorder_level",
+      "supplier",
+      "last_ordered"
+    ]
+  }
+}

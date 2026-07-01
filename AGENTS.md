@@ -27,7 +27,7 @@ The loop follows: **TASK → IMPLEMENT → VERIFY → LOG → (FAIL → MEMORY) 
 - **Constraint:** All decisions must trace to a Chapter 6 section (6.1–6.5)
 
 ### 2.2 Implementer Agent
-- **Scope:** All files under `src/ch6_multimodal_perception/` and `migrations/`
+- **Scope:** All files under `src/ch6/` and `migrations/`
 - **Must NOT:** Modify test files or top-level config docs
 - **Reads before coding:** `TASK.md` (current phase), `MEMORY.md` (known patterns), `FAILURES.md` (known pitfalls)
 - **Signals done:** Appends to `WORKLOG.md` with `[IMPL]` prefix

@@ -1,0 +1,201 @@
+supply_id,item_name,category,quantity,unit_price,reorder_level,supplier,last_ordered
+SUP-5329,Sterile Gauze,Disposable,740,7.99,24,Garcia-Thomas,2026-06-20
+SUP-4225,Nitrile Gloves,Disposable,63,25.99,20,"Willis, Vasquez and Goodwin",2026-05-05
+SUP-1885,Saline Solution,Disposable,335,59.99,40,Jones-Johnson,2026-05-28
+SUP-305,Saline Solution,Personal Protective,996,75.99,48,Sanchez PLC,2026-05-29
+SUP-2057,Saline Solution,Personal Protective,426,57.99,10,"Mason, Patton and Thomas",2026-05-19
+SUP-2755,Sterile Gauze,Personal Protective,985,54.99,40,Williams-Hess,2026-06-26
+SUP-4739,Sterile Gauze,Disposable,71,61.99,22,"King, Frazier and Kidd",2026-06-15
+SUP-3485,Adhesive Tape,Personal Protective,298,5.99,15,"Ferguson, Jones and Davis",2026-06-02
+SUP-2288,Adhesive Tape,Clinical,909,55.99,18,"Wagner, Pham and Henson",2026-06-25
+SUP-4282,Nitrile Gloves,Clinical,261,84.99,25,Clark-Haley,2026-04-30
+SUP-2190,Insulin Syringes,Personal Protective,497,0.99,5,"Thompson, Peters and Horton",2026-05-15
+SUP-6435,Adhesive Tape,Disposable,816,83.99,46,Ryan Ltd,2026-05-11
+SUP-2022,Saline Solution,Clinical,857,76.99,27,Thompson-Tate,2026-06-02
+SUP-138,Insulin Syringes,Clinical,389,24.99,33,Walker Inc,2026-06-08
+SUP-5862,Sterile Gauze,Disposable,845,78.99,45,Stokes-Walker,2026-06-28
+SUP-5947,Insulin Syringes,Clinical,514,90.99,50,"Clark, Gonzalez and Nicholson",2026-05-06
+SUP-4544,Adhesive Tape,Personal Protective,515,21.99,40,Keller PLC,2026-05-31
+SUP-9879,Adhesive Tape,Disposable,76,75.99,13,"Brown, Green and Hudson",2026-04-21
+SUP-8570,Saline Solution,Disposable,878,86.99,6,"Byrd, Mendez and Becker",2026-06-19
+SUP-32,Nitrile Gloves,Personal Protective,699,83.99,8,Reynolds-Carney,2026-04-25
+SUP-8491,Nitrile Gloves,Clinical,380,66.99,7,"Walker, Ramirez and Fisher",2026-05-11
+SUP-84,Nitrile Gloves,Disposable,352,10.99,41,Mooney and Sons,2026-06-28
+SUP-6943,Insulin Syringes,Disposable,211,21.99,26,Brown-Garrett,2026-04-03
+SUP-7077,Insulin Syringes,Personal Protective,826,80.99,26,Wright-Wells,2026-06-26
+SUP-891,Saline Solution,Personal Protective,823,30.99,9,"Harvey, Duran and Garrett",2026-05-23
+SUP-1401,Insulin Syringes,Disposable,396,40.99,49,Patton Inc,2026-06-22
+SUP-7240,Insulin Syringes,Clinical,635,80.99,32,Garcia Inc,2026-05-21
+SUP-4831,Nitrile Gloves,Clinical,108,79.99,31,Hancock Ltd,2026-05-27
+SUP-7428,Nitrile Gloves,Clinical,824,54.99,44,"Garcia, Curtis and Lowe",2026-04-03
+SUP-8474,Saline Solution,Personal Protective,207,13.99,11,Larson Inc,2026-05-24
+SUP-3172,Adhesive Tape,Disposable,662,65.99,21,Fisher-Hardy,2026-05-11
+SUP-3983,Sterile Gauze,Disposable,71,16.99,24,"Graham, Moyer and Webster",2026-04-29
+SUP-8866,Sterile Gauze,Disposable,490,39.99,43,Carter-Cordova,2026-05-17
+SUP-2369,Insulin Syringes,Disposable,529,71.99,8,Cooper-Bray,2026-05-28
+SUP-3297,Insulin Syringes,Clinical,203,85.99,35,"Holt, Mcdonald and Schwartz",2026-06-16
+SUP-9274,Saline Solution,Personal Protective,316,53.99,26,Garcia Inc,2026-05-15
+SUP-60,Sterile Gauze,Personal Protective,245,59.99,44,Allen Ltd,2026-06-09
+SUP-5431,Nitrile Gloves,Disposable,419,23.99,5,Smith-Howard,2026-05-20
+SUP-2333,Saline Solution,Clinical,209,80.99,42,Williams-Johnson,2026-04-18
+SUP-2853,Sterile Gauze,Clinical,746,22.99,26,"Sanchez, Gonzalez and Thompson",2026-04-24
+SUP-1657,Insulin Syringes,Personal Protective,150,48.99,46,Morgan and Sons,2026-04-28
+SUP-3934,Saline Solution,Clinical,686,21.99,38,"Keith, Johns and Jones",2026-04-13
+SUP-2142,Sterile Gauze,Disposable,555,48.99,49,Stewart-Jordan,2026-05-28
+SUP-756,Adhesive Tape,Personal Protective,203,68.99,23,Murphy Inc,2026-05-27
+SUP-4588,Sterile Gauze,Personal Protective,608,62.99,18,"Miller, Ruiz and Alvarado",2026-04-06
+SUP-8333,Nitrile Gloves,Personal Protective,779,65.99,28,Stone-White,2026-06-04
+SUP-8609,Nitrile Gloves,Personal Protective,988,63.99,35,Perkins-Little,2026-06-11
+SUP-599,Sterile Gauze,Disposable,926,25.99,33,Foster LLC,2026-05-09
+SUP-6178,Adhesive Tape,Disposable,967,47.99,21,"Miller, Walton and Phillips",2026-05-17
+SUP-3771,Adhesive Tape,Disposable,486,65.99,44,Simmons-Mcdonald,2026-05-07
+SUP-8151,Saline Solution,Clinical,401,3.99,16,Hall-Brewer,2026-05-03
+SUP-1350,Saline Solution,Personal Protective,535,69.99,46,Hartman and Sons,2026-04-09
+SUP-1168,Saline Solution,Disposable,569,25.99,26,Leonard LLC,2026-04-28
+SUP-4496,Sterile Gauze,Personal Protective,628,17.99,50,"Daniels, Green and Carrillo",2026-04-26
+SUP-5679,Nitrile Gloves,Clinical,851,74.99,46,Kennedy PLC,2026-06-29
+SUP-2445,Nitrile Gloves,Disposable,242,92.99,18,Hall-Matthews,2026-05-20
+SUP-7679,Nitrile Gloves,Clinical,820,10.99,25,Patterson Ltd,2026-05-08
+SUP-7187,Nitrile Gloves,Personal Protective,40,47.99,13,"Russo, Torres and Rojas",2026-05-15
+SUP-5810,Saline Solution,Disposable,439,54.99,48,Farmer-Vaughn,2026-04-27
+SUP-9616,Insulin Syringes,Personal Protective,814,4.99,13,Rowland LLC,2026-05-22
+SUP-9879,Adhesive Tape,Personal Protective,897,50.99,29,Fry Inc,2026-05-19
+SUP-3085,Nitrile Gloves,Disposable,346,72.99,33,"Kline, Davis and Garcia",2026-05-20
+SUP-525,Adhesive Tape,Clinical,37,23.99,17,Pruitt Group,2026-04-26
+SUP-3818,Saline Solution,Personal Protective,546,8.99,34,Wood Inc,2026-04-16
+SUP-6731,Nitrile Gloves,Disposable,123,16.99,39,Mendoza-Jones,2026-06-25
+SUP-3382,Sterile Gauze,Disposable,327,55.99,50,"Wells, Munoz and Crosby",2026-05-23
+SUP-8232,Nitrile Gloves,Clinical,216,0.99,14,Brown-Ross,2026-06-12
+SUP-8615,Saline Solution,Personal Protective,910,62.99,34,Johnston-Mclaughlin,2026-04-26
+SUP-7476,Saline Solution,Personal Protective,872,91.99,24,Austin-Patrick,2026-04-16
+SUP-4081,Sterile Gauze,Personal Protective,760,55.99,34,Bartlett-White,2026-05-22
+SUP-6447,Insulin Syringes,Disposable,916,20.99,22,"Medina, Estrada and Jones",2026-06-05
+SUP-3559,Nitrile Gloves,Clinical,790,70.99,12,Jones-Garcia,2026-06-08
+SUP-5341,Nitrile Gloves,Clinical,178,32.99,18,"Williams, Johnson and Fowler",2026-05-31
+SUP-7567,Nitrile Gloves,Clinical,773,51.99,17,Johnson-King,2026-06-03
+SUP-2236,Saline Solution,Personal Protective,776,59.99,36,Jones-Kelley,2026-04-22
+SUP-7171,Sterile Gauze,Clinical,850,35.99,15,Roberson PLC,2026-04-10
+SUP-4819,Insulin Syringes,Personal Protective,769,50.99,15,Powers Inc,2026-05-31
+SUP-2514,Nitrile Gloves,Clinical,192,27.99,50,Stafford PLC,2026-04-20
+SUP-782,Adhesive Tape,Personal Protective,688,91.99,47,Myers LLC,2026-05-10
+SUP-9800,Insulin Syringes,Disposable,800,48.99,17,Brooks and Sons,2026-04-18
+SUP-262,Nitrile Gloves,Disposable,24,43.99,17,"Caldwell, Walker and Khan",2026-06-11
+SUP-2750,Sterile Gauze,Disposable,435,65.99,11,Morris-Sims,2026-05-27
+SUP-8875,Nitrile Gloves,Clinical,133,29.99,18,Kelly and Sons,2026-04-02
+SUP-5181,Insulin Syringes,Clinical,227,58.99,19,Barrett LLC,2026-05-29
+SUP-6045,Insulin Syringes,Disposable,916,27.99,31,Saunders-Porter,2026-06-29
+SUP-8784,Adhesive Tape,Disposable,267,12.99,43,Jarvis-Horton,2026-06-01
+SUP-2177,Saline Solution,Disposable,660,97.99,49,Spence-Estrada,2026-04-07
+SUP-289,Adhesive Tape,Personal Protective,469,48.99,37,"Harmon, Gordon and Bush",2026-04-02
+SUP-347,Adhesive Tape,Disposable,326,30.99,32,Harvey Inc,2026-04-13
+SUP-8171,Saline Solution,Disposable,165,48.99,18,"Johnson, Mclean and George",2026-06-25
+SUP-5385,Sterile Gauze,Clinical,335,82.99,7,"Conner, Perry and Hess",2026-06-07
+SUP-3752,Saline Solution,Clinical,258,26.99,39,Knox Ltd,2026-06-28
+SUP-3644,Adhesive Tape,Clinical,543,41.99,16,Soto-Brown,2026-05-15
+SUP-3153,Insulin Syringes,Personal Protective,154,26.99,13,Thompson PLC,2026-06-14
+SUP-3348,Sterile Gauze,Personal Protective,90,54.99,34,Martin-Gonzalez,2026-05-09
+SUP-9926,Sterile Gauze,Clinical,302,73.99,33,"Harris, Huffman and Olson",2026-06-25
+SUP-5891,Nitrile Gloves,Clinical,181,60.99,33,Wagner-Moss,2026-06-08
+SUP-7897,Insulin Syringes,Clinical,447,10.99,24,"Medina, Tran and Thompson",2026-05-05
+SUP-5011,Nitrile Gloves,Clinical,394,71.99,43,Jones-Taylor,2026-05-13
+SUP-2535,Sterile Gauze,Disposable,23,64.99,28,Sullivan-Perry,2026-05-06
+SUP-6113,Nitrile Gloves,Clinical,325,82.99,42,Ortiz Inc,2026-06-29
+SUP-2039,Nitrile Gloves,Personal Protective,176,24.99,32,Wise-Walton,2026-05-02
+SUP-8005,Saline Solution,Personal Protective,69,83.99,29,Fitzgerald-Allen,2026-04-04
+SUP-5921,Insulin Syringes,Personal Protective,691,82.99,14,Jacobs-Blackburn,2026-04-14
+SUP-4053,Adhesive Tape,Personal Protective,984,84.99,15,Wilson Inc,2026-05-28
+SUP-6297,Nitrile Gloves,Personal Protective,610,10.99,38,Liu and Sons,2026-06-14
+SUP-4143,Saline Solution,Personal Protective,1000,68.99,47,Willis-Gross,2026-06-07
+SUP-1456,Insulin Syringes,Personal Protective,596,99.99,27,Adams and Sons,2026-06-23
+SUP-6520,Saline Solution,Disposable,182,62.99,5,Jones Ltd,2026-05-08
+SUP-6829,Saline Solution,Personal Protective,451,21.99,16,Lopez-Taylor,2026-05-14
+SUP-8234,Insulin Syringes,Clinical,590,27.99,16,Brown and Sons,2026-06-12
+SUP-3143,Saline Solution,Clinical,461,80.99,44,Oneill and Sons,2026-04-08
+SUP-1404,Nitrile Gloves,Disposable,293,8.99,26,Richards Group,2026-05-14
+SUP-1651,Insulin Syringes,Disposable,282,96.99,5,"Aguilar, Huerta and Davis",2026-05-18
+SUP-118,Nitrile Gloves,Personal Protective,542,97.99,22,Kennedy-Rogers,2026-05-09
+SUP-6074,Saline Solution,Clinical,846,30.99,28,"Ross, Bishop and Hester",2026-06-18
+SUP-1641,Insulin Syringes,Clinical,901,89.99,30,"Houston, Buckley and Johnson",2026-04-12
+SUP-8693,Saline Solution,Personal Protective,779,31.99,28,Montgomery-Hopkins,2026-05-13
+SUP-6768,Sterile Gauze,Disposable,663,41.99,6,"Ward, Williams and Aguirre",2026-04-30
+SUP-7279,Sterile Gauze,Personal Protective,506,51.99,44,Bailey Group,2026-06-28
+SUP-1645,Nitrile Gloves,Clinical,631,24.99,50,Kane PLC,2026-06-10
+SUP-8267,Insulin Syringes,Disposable,519,11.99,24,"Davies, Archer and Owens",2026-06-20
+SUP-1895,Nitrile Gloves,Personal Protective,563,30.99,20,Jackson Ltd,2026-06-02
+SUP-1728,Nitrile Gloves,Personal Protective,39,20.99,25,Miranda-Robinson,2026-04-24
+SUP-7803,Insulin Syringes,Personal Protective,149,68.99,45,"Vasquez, Pope and Cook",2026-04-21
+SUP-9436,Adhesive Tape,Disposable,669,43.99,29,"Paul, Hardy and Valdez",2026-06-10
+SUP-7159,Sterile Gauze,Disposable,275,14.99,23,Rodriguez LLC,2026-06-06
+SUP-3082,Insulin Syringes,Personal Protective,386,16.99,25,Ray-Smith,2026-04-06
+SUP-8775,Sterile Gauze,Clinical,443,40.99,28,"Peck, Martinez and Alvarado",2026-05-24
+SUP-1746,Nitrile Gloves,Disposable,561,58.99,25,Cabrera LLC,2026-06-15
+SUP-8189,Nitrile Gloves,Disposable,625,36.99,14,"Ortega, Solis and Warner",2026-05-24
+SUP-5060,Adhesive Tape,Personal Protective,136,35.99,50,"Mendoza, Poole and Simpson",2026-06-03
+SUP-6171,Insulin Syringes,Clinical,166,91.99,18,"Michael, Walker and Fitzgerald",2026-06-23
+SUP-2933,Nitrile Gloves,Personal Protective,411,38.99,47,Ritter PLC,2026-05-06
+SUP-6921,Nitrile Gloves,Clinical,785,50.99,30,Rose LLC,2026-04-26
+SUP-3196,Adhesive Tape,Clinical,109,16.99,25,"Glenn, Brown and Michael",2026-04-28
+SUP-2681,Adhesive Tape,Disposable,462,89.99,35,Merritt-Clark,2026-06-12
+SUP-3205,Insulin Syringes,Clinical,753,73.99,11,"Floyd, Garrison and Bennett",2026-06-28
+SUP-2756,Insulin Syringes,Disposable,374,60.99,16,Wilson PLC,2026-05-29
+SUP-9722,Nitrile Gloves,Disposable,652,92.99,30,Johnson and Sons,2026-05-06
+SUP-4959,Adhesive Tape,Disposable,678,95.99,29,"Esparza, Lambert and Davis",2026-05-12
+SUP-6260,Saline Solution,Personal Protective,678,56.99,28,Wilson Inc,2026-04-11
+SUP-8351,Sterile Gauze,Disposable,610,73.99,41,Hill-Mcgee,2026-06-11
+SUP-2967,Nitrile Gloves,Clinical,670,89.99,32,Duncan-Garcia,2026-04-06
+SUP-8806,Sterile Gauze,Clinical,842,89.99,6,Hawkins-Herrera,2026-06-13
+SUP-8004,Insulin Syringes,Personal Protective,867,74.99,39,"Fuentes, Pearson and Molina",2026-04-19
+SUP-1922,Sterile Gauze,Personal Protective,721,23.99,5,"West, Edwards and Williams",2026-05-22
+SUP-2641,Insulin Syringes,Personal Protective,272,96.99,7,Whitney PLC,2026-04-27
+SUP-8919,Sterile Gauze,Clinical,977,84.99,5,Turner PLC,2026-06-21
+SUP-4807,Adhesive Tape,Clinical,153,73.99,36,"Edwards, Bartlett and Shea",2026-05-25
+SUP-8365,Sterile Gauze,Personal Protective,111,84.99,7,Johnson and Sons,2026-04-27
+SUP-3526,Sterile Gauze,Personal Protective,575,27.99,42,Ramirez-Daniel,2026-05-08
+SUP-9008,Saline Solution,Clinical,400,83.99,15,Bryant-Duffy,2026-05-31
+SUP-2346,Adhesive Tape,Disposable,82,80.99,22,"Terry, Lee and Watson",2026-05-30
+SUP-8379,Adhesive Tape,Disposable,439,19.99,25,Gray-Maynard,2026-04-23
+SUP-4425,Insulin Syringes,Personal Protective,122,87.99,40,Jones-Bowman,2026-05-03
+SUP-5464,Saline Solution,Disposable,899,28.99,22,Garcia and Sons,2026-05-05
+SUP-1720,Insulin Syringes,Disposable,549,93.99,24,"Nicholson, Burns and Rice",2026-06-03
+SUP-4620,Adhesive Tape,Clinical,632,12.99,8,Stewart Group,2026-04-17
+SUP-8711,Adhesive Tape,Personal Protective,913,51.99,35,"Anderson, Smith and Palmer",2026-04-14
+SUP-2070,Sterile Gauze,Clinical,591,94.99,22,Sellers Ltd,2026-06-27
+SUP-4081,Adhesive Tape,Clinical,733,58.99,16,Andersen-Lindsey,2026-05-16
+SUP-4519,Nitrile Gloves,Personal Protective,974,91.99,19,Reid-Miller,2026-04-28
+SUP-5123,Insulin Syringes,Personal Protective,91,9.99,20,Martin Inc,2026-04-08
+SUP-4683,Adhesive Tape,Clinical,837,1.99,32,"Romero, Cross and Castillo",2026-05-17
+SUP-8722,Insulin Syringes,Clinical,24,78.99,17,"Smith, Coleman and Ferguson",2026-05-02
+SUP-8652,Adhesive Tape,Disposable,631,57.99,15,"Conrad, Gallagher and Mckee",2026-04-16
+SUP-6013,Sterile Gauze,Personal Protective,371,6.99,32,Gray-Brooks,2026-04-11
+SUP-4092,Adhesive Tape,Disposable,307,38.99,35,Baker-Smith,2026-05-27
+SUP-6449,Sterile Gauze,Clinical,961,82.99,37,Walls PLC,2026-06-16
+SUP-942,Saline Solution,Disposable,640,58.99,26,Gomez-Smith,2026-06-20
+SUP-3050,Nitrile Gloves,Clinical,19,12.99,32,Gonzalez-Rice,2026-06-20
+SUP-6729,Insulin Syringes,Clinical,17,19.99,47,Perez-Foster,2026-04-27
+SUP-7017,Sterile Gauze,Personal Protective,841,34.99,11,Douglas-Gonzales,2026-04-13
+SUP-7110,Insulin Syringes,Clinical,914,90.99,17,Lopez Inc,2026-04-13
+SUP-6898,Saline Solution,Disposable,174,85.99,17,Moyer-Bird,2026-04-11
+SUP-8012,Adhesive Tape,Clinical,829,87.99,50,Nguyen Group,2026-05-16
+SUP-6370,Sterile Gauze,Disposable,990,13.99,6,Moore PLC,2026-04-02
+SUP-3874,Insulin Syringes,Personal Protective,859,43.99,32,"Mclaughlin, Hamilton and Roberts",2026-05-14
+SUP-7027,Sterile Gauze,Personal Protective,166,93.99,37,Wright Inc,2026-06-17
+SUP-4052,Nitrile Gloves,Disposable,495,90.99,11,"Cross, Carr and Lopez",2026-06-16
+SUP-2436,Sterile Gauze,Disposable,145,51.99,7,Mooney-Hickman,2026-05-09
+SUP-3270,Insulin Syringes,Disposable,399,52.99,38,Graves-Baird,2026-04-20
+SUP-6980,Nitrile Gloves,Disposable,532,54.99,46,Torres LLC,2026-05-03
+SUP-5751,Nitrile Gloves,Disposable,337,6.99,16,Smith Ltd,2026-06-07
+SUP-3473,Saline Solution,Clinical,296,77.99,11,Lopez-Vaughan,2026-05-03
+SUP-4986,Insulin Syringes,Disposable,695,1.99,48,"Townsend, Anderson and Ward",2026-06-12
+SUP-9648,Adhesive Tape,Personal Protective,390,30.99,46,Clark-Cruz,2026-06-19
+SUP-2137,Adhesive Tape,Disposable,52,75.99,46,Lee Group,2026-06-23
+SUP-1226,Adhesive Tape,Personal Protective,361,38.99,35,Ferguson and Sons,2026-04-04
+SUP-3140,Nitrile Gloves,Personal Protective,738,32.99,40,Jacobson-West,2026-06-04
+SUP-7145,Insulin Syringes,Clinical,439,67.99,37,Jackson LLC,2026-06-02
+SUP-2112,Saline Solution,Disposable,988,72.99,8,"Lee, Olsen and Simpson",2026-05-18
+SUP-8412,Insulin Syringes,Disposable,458,96.99,37,Hart-Myers,2026-05-25
+SUP-3390,Sterile Gauze,Disposable,173,73.99,18,"Horton, Suarez and Gibbs",2026-05-11
+SUP-8602,Saline Solution,Clinical,882,28.99,23,"Adams, Wilson and Walker",2026-05-19
+SUP-4781,Insulin Syringes,Personal Protective,161,35.99,13,Marks-Williams,2026-06-28
+SUP-3440,Adhesive Tape,Disposable,11,83.99,27,"Jacobs, Wood and Miller",2026-06-03
+SUP-8999,Saline Solution,Personal Protective,146,52.99,44,Nguyen-Brown,2026-06-13
+SUP-5824,Sterile Gauze,Personal Protective,998,35.99,16,Bonilla-Medina,2026-06-28
