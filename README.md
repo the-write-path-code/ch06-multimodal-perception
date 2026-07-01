@@ -4,6 +4,8 @@ This repository is the official enterprise technical companion to **Chapter 6: M
 
 It provides an end-to-end asynchronous multimodal ingestion pipeline featuring layout-guided PDF extraction, standalone image VLM parsing, CSV tabular profiling, Whisper audio transcription, PII sensitivity scanning, CLIP dense cross-modal embeddings, SPLADE sparse keyphrase embeddings, SQLite metadata registry tracking, and Qdrant hybrid vector search with Reciprocal Rank Fusion (RRF).
 
+For detailed visual flows and architectural transition diagrams, see the [Ingestion & Retrieval Workflows](file:///Users/mohit/Documents/GitHub/ch6-multimodal-perception/workflow/pipeline_flow.md).
+
 ---
 
 ## 1. Architectural Mapping
