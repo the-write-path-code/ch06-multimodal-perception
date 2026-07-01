@@ -221,22 +221,6 @@ PYTHONPATH=src QDRANT_URL=:memory: uv run python scripts/run_pipeline.py
 
 ---
 
-## Agentic Loop Tracking
-
-To support safe pair-programming and autonomous iteration in enterprise environments, this repository uses a **phase-gated agentic loop protocol**:
-
-| File | Purpose |
-|---|---|
-| `AGENTS.md` | Defines roles (Architect, Implementer, Verifier, Memory) and file ownership contracts |
-| `TASK.md` | Roadmap phases and current task status |
-| `WORKLOG.md` | Activity audit log of code and verification runs |
-| `MEMORY.md` | Engineering lessons, gotchas, and reusable patterns |
-| `FAILURES.md` | Error summaries and proposed resolutions |
-
-See the [Agentic Loop State Diagram](workflow/pipeline_flow.md#4-gated-agentic-loop-state-transitions) for a visual overview.
-
----
-
 ## Workflow Diagrams
 
 All architectural and operational workflows are documented with Mermaid diagrams in [`workflow/pipeline_flow.md`](workflow/pipeline_flow.md):
@@ -244,8 +228,6 @@ All architectural and operational workflows are documented with Mermaid diagrams
 1. **End-to-End Ingestion Pipeline** — Document → Extraction → Embedding → Handoff → Qdrant
 2. **Cross-Modal Search & Retrieval** — Query → Encode → Prefetch → RRF → Registry Join
 3. **Gradio Explorer UI Flow** — Startup → Auto-Ingest → Search → RAG Answer → Render
-4. **Gated Agentic Loop** — Architect → Implementer → Verifier → Memory → Orchestrator
-
 ---
 
 ## License
