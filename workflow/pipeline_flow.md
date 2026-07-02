@@ -219,3 +219,40 @@ graph TD
 | Retry on timeout | **No** | `TimeoutException` fails immediately (no backoff loop) |
 | Retry on HTTP 429 | **Yes** | Up to 3 attempts with exponential backoff (2s → 4s → 8s) |
 | Mock fallback | Sample files only | Insurance card and nurse note return pre-configured schemas |
+
+---
+## Sec 6.1 image
+
+```
+graph TD
+    subgraph P1[" "]
+    direction LR
+    A["Source File"] --> B{"Format<br/>Dispatcher"}
+    B -->|PDF/Image/Table/Audio| C["Format Parsers<br/>Docling · VLM · Pandas · Whisper"]
+    C --> D["PerceptionChunk<br/>(text + metadata)"]
+    D --> E["PII Redactor<br/>GLiNER + Regex"]
+    E --> F["Tagged Chunk"]
+    end
+
+    subgraph P2[" "]
+    direction LR
+    G["Dual Encoders<br/>CLIP + SPLADE"] --> H["Asset Registry<br/>(SQLite)"]
+    H --> I{"Contract<br/>Verifier"}
+    I -->|Conf ≥0.85, PII=False| J1["✅ VALID"]
+    I -->|Conf <0.50 or PII=True| J2["⚠️ REVIEW"]
+    J1 --> K["Index in Qdrant<br/>+ Update Chunk Table"]
+    J2 --> M["Review Queue<br/>(Skip Indexing)"]
+    end
+
+    P1 --> P2
+
+    style A fill:#6366f1,color:#fff,stroke:#4f46e5
+    style B fill:#1e293b,color:#f1f5f9,stroke:#334155
+    style J1 fill:#16a34a,color:#fff,stroke:#15803d
+    style J2 fill:#ea580c,color:#fff,stroke:#c2410c
+    style K fill:#2563eb,color:#fff,stroke:#1d4ed8
+    style M fill:#dc2626,color:#fff,stroke:#b91c1c
+    style P1 fill:transparent,stroke:transparent
+    style P2 fill:transparent,stroke:transparent
+
+```
