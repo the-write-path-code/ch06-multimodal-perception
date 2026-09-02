@@ -47,7 +47,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ```bash
 git clone https://github.com/the-write-path-code/ch06-multimodal-perception.git
-cd ch6-multimodal-perception
+cd ch06-multimodal-perception
 uv sync
 ```
 
@@ -235,7 +235,7 @@ Run the test suite before changing extraction schemas, confidence thresholds, PI
 ├── data/
 │   ├── samples/                      # Generated synthetic source documents
 │   └── registry.db                   # Local SQLite registry, created at runtime
-├── src/ch6/
+├── src/ch06/
 │   ├── config.py                     # Pydantic settings and environment loading
 │   ├── models.py                     # PerceptionChunk and typed contracts
 │   ├── pipeline.py                   # Ingestion orchestration and bounded concurrency
