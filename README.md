@@ -46,7 +46,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### 2. Clone and synchronize the repository
 
 ```bash
-git clone https://github.com/the-write-path-code/ch6-multimodal-perception.git
+git clone https://github.com/the-write-path-code/ch06-multimodal-perception.git
 cd ch6-multimodal-perception
 uv sync
 ```
