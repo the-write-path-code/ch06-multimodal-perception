@@ -115,10 +115,6 @@ graph TD
     %% Enriched results
     RegistryLookup --> JoinOutput["Assemble Enriched<br/>Search Results"]
 
-    %% Styling
-    style UserQuery fill:#6366f1,color:#fff,stroke:#4f46e5
-    style RRFFusion fill:#9333ea,color:#fff,stroke:#7e22ce
-    style JoinOutput fill:#16a34a,color:#fff,stroke:#15803d
 ```
 
 ### Hybrid Search Details
@@ -171,11 +167,6 @@ graph TD
     
     Reindex --> Ready
 
-    %% Styling
-    style Launch fill:#6366f1,color:#fff,stroke:#4f46e5
-    style Ready fill:#16a34a,color:#fff,stroke:#15803d
-    style RAGAnswer fill:#1e1b4b,color:#a5b4fc,stroke:#4f46e5
-    style FinalDisplay fill:#0f172a,color:#f1f5f9,stroke:#334155
 ```
 
 ---
@@ -208,11 +199,6 @@ graph TD
     
     MockResponse --> Success
 
-    %% Styling
-    style Request fill:#6366f1,color:#fff,stroke:#4f46e5
-    style Success fill:#16a34a,color:#fff,stroke:#15803d
-    style MockResponse fill:#eab308,color:#1e293b,stroke:#ca8a04
-    style RaiseError fill:#dc2626,color:#fff,stroke:#b91c1c
 ```
 
 ### Timeout & Retry Policy
