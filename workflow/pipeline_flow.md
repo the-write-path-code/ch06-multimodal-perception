@@ -230,13 +230,4 @@ graph TD
 
     P1 --> P2
 
-    style A fill:#6366f1,color:#fff,stroke:#4f46e5
-    style B fill:#1e293b,color:#f1f5f9,stroke:#334155
-    style J1 fill:#16a34a,color:#fff,stroke:#15803d
-    style J2 fill:#ea580c,color:#fff,stroke:#c2410c
-    style K fill:#2563eb,color:#fff,stroke:#1d4ed8
-    style M fill:#dc2626,color:#fff,stroke:#b91c1c
-    style P1 fill:transparent,stroke:transparent
-    style P2 fill:transparent,stroke:transparent
-
 ```
