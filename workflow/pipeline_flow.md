@@ -54,13 +54,6 @@ graph TD
     K --> L["Update Chunk Table<br/>with Qdrant Point ID"]
     J2 --> M["Hold in Registry<br/>Review Queue<br/>Skip Indexing"]
 
-    %% Styling
-    style A fill:#6366f1,color:#fff,stroke:#4f46e5
-    style B fill:#1e293b,color:#f1f5f9,stroke:#334155
-    style J1 fill:#16a34a,color:#fff,stroke:#15803d
-    style J2 fill:#ea580c,color:#fff,stroke:#c2410c
-    style K fill:#2563eb,color:#fff,stroke:#1d4ed8
-    style M fill:#dc2626,color:#fff,stroke:#b91c1c
 ```
 
 ### Key Design Decisions
@@ -213,7 +206,8 @@ graph TD
 ---
 ## Sec 6.1 image
 
-```
+```mermaid
+%%{init: {"theme": "neutral", "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif", "fontSize": "11px", "actorFontSize": "11px", "noteFontSize": "10px", "messageFontSize": "10px"}}}%%
 graph TD
     subgraph P1[" "]
     direction LR
