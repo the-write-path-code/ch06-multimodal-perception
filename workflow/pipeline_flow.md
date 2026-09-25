@@ -11,6 +11,7 @@ This document details the operational workflows of the multimodal perception lay
 This workflow represents the ingestion of documents of various modalities (PDF, PNG, CSV, WAV) through the perception extractors, embeddings, PII scanners, handoff verifiers, SQLite registries, and the Qdrant vector database.
 
 ```mermaid
+%%{init: {"themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif", "fontSize": "11px", "actorFontSize": "11px", "noteFontSize": "10px", "messageFontSize": "10px"}}}%%
 graph TD
     %% Source File Input
     A["Source File Path"] --> B{"Mime Type / Extension Dispatcher"}
@@ -80,6 +81,7 @@ graph TD
 This workflow displays the hybrid search retrieval, combining CLIP dense, SPLADE sparse, Reciprocal Rank Fusion (RRF), and SQL metadata joins to yield enriched assets.
 
 ```mermaid
+%%{init: {"theme": "neutral", "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif", "fontSize": "11px", "actorFontSize": "11px", "noteFontSize": "10px", "messageFontSize": "10px"}}}%%
 graph TD
     %% Query Inputs
     UserQuery["User Query<br/>text and/or image"] --> QueryDispatcher{"Query Type Router"}
@@ -136,6 +138,7 @@ graph TD
 This workflow shows how the Gradio web application orchestrates the full pipeline lifecycle — from startup auto-ingestion through interactive query, RAG answer synthesis, and result rendering.
 
 ```mermaid
+%%{init: {"theme": "neutral", "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif", "fontSize": "11px", "actorFontSize": "11px", "noteFontSize": "10px", "messageFontSize": "10px"}}}%%
 graph TD
     %% Startup Phase
     Launch["python scripts/app.py"] --> EnvSetup["Load .env<br/>Force QDRANT_URL = :memory:"]
@@ -184,6 +187,7 @@ graph TD
 This diagram shows how the VLM client routes requests through multiple backends with timeout handling and mock fallbacks.
 
 ```mermaid
+%%{init: {"themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif", "fontSize": "11px", "actorFontSize": "11px", "noteFontSize": "10px", "messageFontSize": "10px"}}}%%
 graph TD
     Request["analyze_image(prompt, image)"] --> Router{"VLM Backend Router"}
     
