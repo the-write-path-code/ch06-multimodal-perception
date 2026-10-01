@@ -74,40 +74,36 @@ graph TD
 This workflow displays the hybrid search retrieval, combining CLIP dense, SPLADE sparse, Reciprocal Rank Fusion (RRF), and SQL metadata joins to yield enriched assets.
 
 ```mermaid
-%%{init: {"theme": "neutral", "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif", "fontSize": "11px", "actorFontSize": "11px", "noteFontSize": "10px", "messageFontSize": "10px"}}}%%
-graph TD
-    %% Query Inputs
-    UserQuery["User Query<br/>text and/or image"] --> QueryDispatcher{"Query Type Router"}
-    
-    %% Text route
-    QueryDispatcher -->|Text| TextEncoder["Text Query Encoders"]
-    TextEncoder --> DenseText["CLIP Dense Vector<br/>512 dimensions"]
-    TextEncoder --> SparseText["SPLADE Sparse Vector<br/>keyword weights"]
-    
-    %% Image route
-    QueryDispatcher -->|Image| ImageEncoder["CLIP Image Encoder"]
-    ImageEncoder --> DenseImage["CLIP Dense Vector<br/>512 dimensions"]
-    
-    %% Qdrant Query
-    DenseText & SparseText & DenseImage --> QdrantSearch["Qdrant Search Request"]
-    
-    %% Fusion and Filtering
-    QdrantSearch --> PrefetchDense["Prefetch: Dense Search<br/>Cosine Similarity"]
-    QdrantSearch --> PrefetchSparse["Prefetch: Sparse Search<br/>Dot Product"]
-    
-    %% Modality filtering
-    PrefetchDense & PrefetchSparse --> FilterModality["Apply Modality Filter<br/>if requested"]
-    
-    %% Fusion
-    FilterModality --> RRFFusion["Reciprocal Rank Fusion<br/>RRF Score Merge"]
-    
-    %% Registry join
-    RRFFusion --> MatchPoints["Retrieve Point IDs & Scores"]
-    MatchPoints --> RegistryLookup["SQLite Registry Lookup<br/>SELECT * WHERE qdrant_point_id = ?"]
-    
-    %% Enriched results
-    RegistryLookup --> JoinOutput["Assemble Enriched<br/>Search Results"]
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif", "fontSize": "19px", "primaryTextColor": "#000000", "lineColor": "#4B5563"}}}%%
+flowchart TD
+    subgraph Tier1 ["Stage 1: Multi-Modal Query Routing & Dual Encoding"]
+        direction LR
+        UQ["User Query<br/>(Text / Image)"] --> ROUTE{"Query Type<br/>Router"}
+        ROUTE -->|"Text"| ENC_T["Text Encoders<br/>• CLIP Dense (512d)<br/>• SPLADE Sparse"]
+        ROUTE -->|"Image"| ENC_I["Image Encoder<br/>• CLIP Vision (512d)"]
+    end
 
+    subgraph Tier2 ["Stage 2: Qdrant Search, Rank Fusion & Registry Join"]
+        direction LR
+        QDRANT["Qdrant Search Request<br/>• Dense Prefetch (Cosine)<br/>• Sparse Prefetch (Dot)"]
+        FILTER["Filter & RRF Fusion<br/>(Score Merge)"]
+        JOIN["SQLite Registry Join<br/>& Enriched Results"]
+        QDRANT --> FILTER --> JOIN
+    end
+
+    Tier1 --> Tier2
+
+    classDef query fill:#EBF5FF,stroke:#2563EB,color:#000000,stroke-width:1.5px
+    classDef router fill:#FEF9C3,stroke:#CA8A04,color:#000000,stroke-width:1.5px
+    classDef enc fill:#EDE9FE,stroke:#7C3AED,color:#000000,stroke-width:1.5px
+    classDef search fill:#FEF3C7,stroke:#D97706,color:#000000,stroke-width:1.5px
+    classDef fuse fill:#DCFCE7,stroke:#15803D,color:#000000,stroke-width:1.5px
+
+    class UQ query
+    class ROUTE router
+    class ENC_T,ENC_I enc
+    class QDRANT search
+    class FILTER,JOIN fuse
 ```
 
 ### Hybrid Search Details
