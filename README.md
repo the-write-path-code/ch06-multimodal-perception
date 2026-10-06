@@ -2,7 +2,7 @@
 
 Companion code for *Building Safe Agentic AI for Enterprise Systems* by Mohit Aggarwal.
 
-This repository builds a multimodal ingestion and retrieval pipeline for PDFs, images, tables, and audio. Each input becomes a typed `PerceptionChunk` that carries source provenance, structured extraction, confidence, and personally identifiable information (PII) status through embedding, validation, and indexing.
+This repository builds a multimodal ingestion and retrieval pipeline for PDFs, images, tables, and audio. Each input becomes a typed `PerceptionChunk` that carries source provenance, structured extraction, confidence, and personally identifiable information (PII) status through embedding, validation, and indexing. You can also explore the chapter's [interactive workflow diagrams](#architecture-and-workflow-diagrams) directly in your browser.
 
 The design does not let raw model output move directly into the retrieval layer. A chunk is scanned, typed, and checked at a handoff boundary before it can enter Qdrant. Low-confidence or PII-flagged chunks are held for review instead of indexed.
 
@@ -260,22 +260,33 @@ Run the test suite before changing extraction schemas, confidence thresholds, PI
 │   ├── generate_samples.py
 │   ├── app.py                        # Gradio Explorer entry point
 │   └── run_pipeline.py               # Headless ingestion runner
-├── workflow/
-│   └── pipeline_flow.md              # Mermaid diagrams and system workflows
+├── workflow/                          # Interactive HTML architecture diagrams and companion workflow specifications
+│   ├── 01_multimodal_extraction_layer.html
+│   ├── 02_handoff_contract_verification.html
+│   ├── 03_end_to_end_ingestion_pipeline.html
+│   ├── 04_cross_modal_retrieval_flow.html
+│   ├── 05_gradio_explorer_workflow.html
+│   ├── 06_vlm_failover_strategy.html
+│   ├── Figure 6-1 and 2.md
+│   └── pipeline_flow.md
 └── tests/
 ```
 
-## Architecture Diagrams and Supporting Documents
+<a id="architecture-and-workflow-diagrams"></a>
+## Architecture and Workflow Diagrams
 
-The `workflow/` directory contains the diagrams used in Chapter 6:
+The `workflow/` directory contains interactive HTML diagrams alongside companion markdown documentation and schematics (`Figure 6-1 and 2.md`, `pipeline_flow.md`) detailing the multimodal extraction layer, dual vector encoding, asset registry, handoff contracts, hybrid search, Gradio explorer UI, and VLM failover strategy explored in Chapter 6:
 
-- End-to-end multimodal ingestion.
-- Cross-modal retrieval with CLIP, SPLADE, Qdrant, and RRF.
-- Explorer UI startup, ingestion, search, and re-indexing.
-- VLM backend routing and timeout handling.
-- The handoff decision between `VALID` indexing and `REVIEW` containment.
+- [`01_multimodal_extraction_layer.html`](https://the-write-path-code.github.io/ch06-multimodal-perception/workflow/01_multimodal_extraction_layer.html) shows Figure 6.1 multi-modal extraction layer, MIME-driven dispatch, Docling PDF, VLM image parsing, tabular/audio profiling, canonical `PerceptionChunk` state, and GLiNER PII redaction.
+- [`02_handoff_contract_verification.html`](https://the-write-path-code.github.io/ch06-multimodal-perception/workflow/02_handoff_contract_verification.html) shows Figure 6.2 dual-encoding (CLIP 512d & SPLADE), SQLite asset registry persistence, and the deterministic handoff contract verifier routing chunks to valid Qdrant indexing vs. quarantine review.
+- [`03_end_to_end_ingestion_pipeline.html`](https://the-write-path-code.github.io/ch06-multimodal-perception/workflow/03_end_to_end_ingestion_pipeline.html) shows the complete end-to-end ingestion pipeline across document cropping, VLM extraction, PII scanning, dual vector encoding, SQLite tracking, and gated vector upsert.
+- [`04_cross_modal_retrieval_flow.html`](https://the-write-path-code.github.io/ch06-multimodal-perception/workflow/04_cross_modal_retrieval_flow.html) shows cross-modal query routing (text and image inputs), dual encoder embeddings, Qdrant dense/sparse prefetch, Reciprocal Rank Fusion (RRF), and SQLite metadata enrichment.
+- [`05_gradio_explorer_workflow.html`](https://the-write-path-code.github.io/ch06-multimodal-perception/workflow/05_gradio_explorer_workflow.html) shows the Gradio Explorer UI lifecycle, in-memory startup auto-ingestion, interactive search execution, grounded VLM RAG answer synthesis, and card rendering.
+- [`06_vlm_failover_strategy.html`](https://the-write-path-code.github.io/ch06-multimodal-perception/workflow/06_vlm_failover_strategy.html) shows the VLM client multi-backend router, 15-second hard timeout policy, deterministic sample mock fallbacks, and unknown file review escalation.
 
-Read the ingestion diagram before modifying the pipeline. The ordering matters: PII scanning occurs before embedding and vector indexing, and handoff verification occurs before a chunk receives a Qdrant point ID.
+The interactive `.html` files in `workflow/` can be opened directly in your browser using the links above (hosted via GitHub Pages with pan, zoom, dark/light theme, and animation support), or opened locally in any modern browser.
+
+The design documents and companion markdown files in `workflow/` remain the authoritative source for exact prompt templates, schema definitions, model configurations, and extraction parameters.
 
 ## Safety and Operational Limits
 
